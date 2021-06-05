@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>The Weighing of the Hearts</title>
+        <script src="js/main.js"></script>
+        <script src="js/saving.js"></script>
+        <script src="js/update.js"></script>
+        <script src="js/phase1.js"></script>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+        <style>*{font-family: 'Montserrat', sans-serif;}</style>
+    </head>
+    <body style="text-align: center;">
+        <img src="images/title.png" alt="The Weighing of the Hearts">
+
+        <div id="start">
+            <button onclick="startUp()">Play</button>
+        </div>
+        <div id="main" style="display:none">
+            <button onclick="hardReset()">Hard Reset (Be sure you want to do this!)</button>
+            <br>
+            <h2>You have <span id="spiritPoints"></span> spirit points.</h2>
+            <br>
+            You have <span id="ba"></span> ba and <span id="ka"></span> ka, multiplying spirit point gain by <span id="spGain"></span> and giving <span id="akhScore"></span> akh score.<br>
+            You need <span id="kbReq"></span> spirit points to reset for 1 ba/ka.
+            <button onclick="kbReset('b')">Reset for 1 ba.</button><button onclick="kbReset('k')">Reset for 1 ka.</button><br><br>
+            You have <span id="akh"></span> akh, raising base ba and ka effect to <span id="akhEff"></span>.
+            <button onclick="akhReset()">Reset for <span id="akhGain"></span> akh.<br>Next at <span id="akhNext"></span> akh score.</button><br><br>
+            <table id="BaUpgs"></table><br><br>
+            <table id="KaUpgs"></table>
+        </div>
+        <div id="phase1" style="display:none">
+            <button onclick="phase1End()">Move beyond the mortal world and begin your journey through Duat!</button><br>
+        </div>
+    </body>
+</html>
